@@ -1,0 +1,3 @@
+([('projectile',
+   '/Users/davidsurry/Desktop/projectile-solver/dist/projectile',
+   'EXECUTABLE')],)
