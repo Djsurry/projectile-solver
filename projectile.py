@@ -1,5 +1,6 @@
 #ex physics
-import math, sys, cutie, readchar, os
+from math import cos, sqrt, sin, radians, degrees, atan
+import sys, cutie, readchar, os
 GRAVITY = -9.8
 SIZE = 10
 def quad(a, b, c):
@@ -9,8 +10,8 @@ def quad(a, b, c):
 	d = (b * b) - 4 * a * c
 	if d < 0:
 		return None
-	a1 = (-b + math.sqrt(d))/a2
-	a2 = (-b - math.sqrt(d))/a2
+	a1 = (-b + sqrt(d))/a2
+	a2 = (-b - sqrt(d))/a2
 
 	return (a1,) if a1 == a2 else (a1, a2)
 
@@ -89,8 +90,8 @@ def getInputs():
 
 
 def splitVel(a, vel, h):
-	opp = math.sin(math.radians(a))*vel
-	adj = math.cos(math.radians(a))*vel
+	opp = sin(radians(a))*vel
+	adj = cos(radians(a))*vel
 	x = Kinematic(0,adj,adj, None, None)
 	y = Kinematic(GRAVITY, opp, None, None, -h)
 	return x, y
@@ -131,7 +132,7 @@ class Problem:
 		#solve for ds for x: ds = v1*dt
 		self.x.s = self.x.v1*self.x.t
 		# solve for v2 for y
-		self.y.v2 = math.sqrt(2*self.y.a*self.y.s + self.y.v1*self.y.v1)
+		self.y.v2 = sqrt(2*self.y.a*self.y.s + self.y.v1*self.y.v1)
 
 	def range(self):
 		clear(SIZE)
@@ -148,11 +149,11 @@ class Problem:
 
 	def speedAtGround(self):
 		clear(SIZE)
-		print("Speed on impact with ground is {0:.2f}m/s\n".format(math.sqrt(self.x.v1 * self.x.v1 + self.y.v2 * self.y.v2)))
+		print("Speed on impact with ground is {0:.2f}m/s\n".format(sqrt(self.x.v1 * self.x.v1 + self.y.v2 * self.y.v2)))
 
 	def velocityAtGround(self):
 		clear(SIZE)
-		print("Velocity on impact with ground is {0:.2f}m/s offset {1:.2f} degress down\n".format(math.sqrt(self.x.v1 * self.x.v1 + self.y.v2 * self.y.v2), math.degrees(math.atan(self.y.v2/self.x.v1))))
+		print("Velocity on impact with ground is {0:.2f}m/s offset {1:.2f} degress down\n".format(sqrt(self.x.v1 * self.x.v1 + self.y.v2 * self.y.v2), degrees(atan(self.y.v2/self.x.v1))))
 	def totalTime(self):
 		clear(SIZE)
 		print("Time is {0:.2f}\n".format(self.x.t))
