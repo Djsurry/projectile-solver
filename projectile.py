@@ -155,7 +155,7 @@ class Problem:
 		print("Velocity on impact with ground is {0:.2f}m/s offset {1:.2f} degress down\n".format(math.sqrt(self.x.v1 * self.x.v1 + self.y.v2 * self.y.v2), math.degrees(math.atan(self.y.v2/self.x.v1))))
 	def totalTime(self):
 		clear(SIZE)
-		print("Time is {0:.2f}".format(self.x.t))
+		print("Time is {0:.2f}\n".format(self.x.t))
 	def xyT(self):
 		clear(SIZE)
 		toRemove = 0
@@ -181,27 +181,85 @@ class Problem:
 		y.t = t
 		# ds = v1 * t + 1/2 * a * t
 		y.s = y.v1 * y.t + 0.5*y.a*(y.t*y.t)
-		print("It has traveled {0:.2f}m and is {2:.2f}m off the ground at {1}s".format(x.s, x.t, self.height+y.s))
+		print("It has traveled {0:.2f}m in the x direction and is {2:.2f}m off the ground at {1}s\n".format(x.s, x.t, self.height+y.s))
 
 	def xyD(self):
 		clear(SIZE)
-		print("Coming soon")
-		# toRemove = 2
-		# options = ["Find X from Y", "Find Y from X"]
-		# option = options[cutie.select(options, selected_index=0)]
-		# while True:
-		# 	t = input("At what distance? ")
-		# 	toRemove += 1
-		# 	t = isFloat(t)
-		# 	if t:
-		# 		if t > self.x.s and option =="Find Y from X":
-		# 			print("Out of domain")
-		# 			toRemove += 1
-		# 			continue
+		a = GRAVITY
+		v1 = self.y.v1
+		#v2^2 - v1^2 = 2*a*ds
+		
+		s = (-1*v1*v1)/(a*2) + self.height
+		toRemove = 2
+		options = ["Find X from Y", "Find Y from X"]
+		option = options[cutie.select(options, selected_index=0)]
+		while True:
+			if option == "Find Y from X":
+				t = input("At what distance from the starting point? ")
+				toRemove += 1
+				t = isFloat(t)
+				if t:
+					if t > self.x.s and option =="Find Y from X":
+						print("Out of domain")
+						toRemove += 1
+						continue
+					else:
+						break
+			elif option == "Find X from Y":
+				t = input("At what distance from the ground? ")
+				toRemove += 1
+				t = isFloat(t)
+				if (t > self.height + s or t < 0) and option == "Find X from Y":
+					print("Out of domain")
+					toRemove += 1
+					continue
+				else:
+					break
+		
+	
+		if option == "Find X from Y":
+			t = self.y.s + t
+			# ds = self.height + t, t = None, a = -9.8, v1 = initVel, v2 = None
+			# ds = v1 * t + 0.5 * a * t^2
+			a = 0.5*GRAVITY
+			b = self.y.v1
+			c = -1*t
 
+			answers = quad(a, b, c)
+			if answers:
+				if len(answers) == 2:
+					correct = cutie.select(["Which is correct for time?"] + list(answers), caption_indices = [0])
+					toRemove += 3
+				else:
+					correct = answers[0]
 
+			else:
+				clear(toRemove)
+				print("Bad input")
+				
+				
+				return
+			# find for x
+			# ds = None, t = t, a = 0, v1 = v1, v2=v2
+			# ds = v1*t + 0.5*a*t^2
+			s = self.x.v1*correct
+			clear(toRemove)
+			print("It will have traved {0:.2f}m in the X direction when it is {1:.2f}m off the ground\n".format(s, t-self.y.s))
+			
+		elif option == "Find Y from X":
+			# ds = input, t = None, a = 0, v1 = v1, v2 = v2
+			# ds = v1 * t + 0.5 * a * t^2
 
+			time = t/self.x.v1
+			# find for y
+			# ds = None, t = t, a = 0, v1 = v1, v2=v2
+			# ds = v1*t + 0.5*a*t^2
+			s = self.y.v1 * time + 0.5 * self.y.a * (time*time)
+			clear(toRemove)
+			
+			print("It will have a displacement of {0:.2f}m on the Y axis when it has gone {1:.2f}m on the X axis\n".format(s, t))
 
+			
 
 def main():
 	i = getInputs()
