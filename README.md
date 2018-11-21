@@ -12,7 +12,7 @@ unzip v<b>1.1</b>.zip
 </pre><br>
 <pre>
 cd projectile-solver-<b>1.1<b>
-<\pre><br>
+</pre><br>
 `sudo ./setup` <br>
 ***You might have to enter your password here***
 
