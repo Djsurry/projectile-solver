@@ -2,10 +2,10 @@
 Solves physics projectile questions
 
 # Installation
-open a terminal and type the following:
-`git clone https://github.com/Djsurry/projectile-solver`
-`cd projectile-solver`
-`sudo ./setup`
+open a terminal and type the following: <br>
+`git clone https://github.com/Djsurry/projectile-solver` <br>
+`cd projectile-solver` <br>
+`sudo ./setup` <br>
 ***You might have to enter your password here***
 
 
