@@ -1,8 +1,12 @@
 #ex physics
 from math import cos, sqrt, sin, radians, degrees, atan
-import sys, cutie, readchar, os
+import cutie, readchar
+from sys import exit as close
+from os import system
 GRAVITY = -9.8
 SIZE = 10
+
+
 def quad(a, b, c):
 	a2 = a*2
 
@@ -64,7 +68,7 @@ def getInputs():
 	   
 	    char = readchar.readkey()
 	    if char == "\x03":
-	        sys.exit(0)
+	        close(0)
 	    elif char == '\x1b\x5b\x42':
 	        currentLevel = currentLevel + 1 if currentLevel != 2 else 0
 	    elif char == '\x1b\x5b\x41':
@@ -108,7 +112,7 @@ class Problem:
 		self.y.t = quad(0.5*self.y.a, self.y.v1, -1*self.y.s)
 		if not self.y.t:
 			print("No solution")
-			sys.exit(0)
+			close(0)
 		if len(self.y.t) == 2:
 			
 			options = ["Which of these is right for time", self.y.t[0], self.y.t[1]]
@@ -273,7 +277,7 @@ def main():
 		if choice == "Range":
 			p.range()
 		elif choice == "Quit":
-			sys.exit(0)
+			close(0)
 		elif choice == "Maximum height":
 			p.maxHeight()
 		elif choice == "X and Y at specific time":
@@ -287,7 +291,7 @@ def main():
 		elif choice == "Velocity at impact on ground":
 			p.velocityAtGround()
 		elif choice == "New problem":
-			os.system("clear")
+			system("clear")
 			print("\n")
 			main()
 
