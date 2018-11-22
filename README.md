@@ -16,6 +16,8 @@ sudo ./setup
 If you have a problem where you have an object being launched from a certain height at a certain angle at a certain velocity, this will preform an analysis on the movement
 
 # Versions
+[1.4](https://github.com/Djsurry/projectile-solver/releases/tag/v1.4)
+
 [1.3](https://github.com/Djsurry/projectile-solver/releases/tag/v1.3)
 
 [1.2](https://github.com/Djsurry/projectile-solver/releases/tag/v1.2)
