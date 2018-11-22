@@ -1,6 +1,9 @@
 # projectile-solver
 Solves physics projectile questions
 
+# Most recent Version
+1.2
+
 # Installation
 open a terminal and type the following: <br>
 ***REPLACE THE BOLDED TEXT WITH THE MOST RECENT VERSION***<br>
