@@ -1,4 +1,4 @@
-# projectile-solver
+# Projectile Solver
 Solves physics projectile questions
 
 # Installation
