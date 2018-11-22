@@ -5,7 +5,7 @@ Solves physics projectile questions
 If you have a problem where you have an object being launched from a certain height at a certain angle at a certain velocity, this will preform an analysis on the movement. [If you need help, click here](#Documentation)
 
 # Installation
-open a terminal and type the following: <br>
+Open a terminal and type the following: 
 
 > Replace the bolded text in the code below with the most recent version. A list of versions is available [here](#Versions)
 
