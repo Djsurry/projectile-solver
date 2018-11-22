@@ -16,7 +16,7 @@ sudo ./setup
 ***You might have to enter your password here***
 
 # Documentation
-## Inputs
+### Inputs
 The program asks for 3 inputs; `height`, `angle`, and `initial velocity`.
 1. Height
    * A number, in meters
@@ -27,7 +27,7 @@ The program asks for 3 inputs; `height`, `angle`, and `initial velocity`.
 3. inital velocity
    * a number, in m/s
 
-## Options
+### Options
 1. Range
    * the total distance the projectile goes, along the x, in m
 2. Total time
