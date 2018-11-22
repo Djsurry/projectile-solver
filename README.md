@@ -3,7 +3,7 @@ Solves physics projectile questions
 
 # Installation
 open a terminal and type the following: <br>
-***REPLACE THE BOLDED TEXT WITH THE MOST RECENT VERSION***<br>
+[***REPLACE THE BOLDED TEXT WITH THE MOST RECENT VERSION***](#Versions)<br>
 <pre>
 curl https://codeload.github.com/Djsurry/projectile-solver/zip/v<b>1.0</b> --output projectile.zip<br>
 unzip projectile.zip <br>
