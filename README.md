@@ -8,7 +8,7 @@ open a terminal and type the following: <br>
 curl https://codeload.github.com/Djsurry/projectile-solver/zip/v<b>1.3</b> --output projectile.zip<br>
 unzip projectile.zip <br>
 cd projectile-solver-<b>1.3</b> <br>
-./setup
+sudo ./setup
 </pre>
 ***You might have to enter your password here***
 
