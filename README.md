@@ -19,33 +19,33 @@ sudo ./setup
 ## Inputs
 The program asks for 3 inputs; `height`, `angle`, and `initial velocity`.
 1. Height
-  - A number, in meters
-  - The height at which the ball is being launched from
+  * A number, in meters
+  * The height at which the ball is being launched from
 2. Angle
-  - a number, in degrees
-  - the angle the ball is being launched from
+  * a number, in degrees
+  * the angle the ball is being launched from
 3. inital velocity
-  - a number, in m/s
+  * a number, in m/s
 
 ## Options
 1. Range
-  - the total distance the projectile goes, along the x, in m
+  * the total distance the projectile goes, along the x, in m
 2. Total time
-  - the time it takes the ball to hit the ground, in s
+  * the time it takes the ball to hit the ground, in s
 3. X and Y at specific time
-  - Asks for an input, which is a time value in seconds. Must be within the range of possible times
-  - Prints the X and Y at that time, in s
+  * Asks for an input, which is a time value in seconds. Must be within the range of possible times
+  * Prints the X and Y at that time, in s
 4. X or Y at cooresponding distance
-  - finds x at a specific y or y at a specific x
-  - asks whether you want to find x from y or y from x
-  - asks for a distance, in meters, must be in range
-  - prints the other distance, in meters, of the other variable
+  * finds x at a specific y or y at a specific x
+  * asks whether you want to find x from y or y from x
+  * asks for a distance, in meters, must be in range
+  * prints the other distance, in meters, of the other variable
 5. Maximum height
-  - the max height the projectile reaches, in m
+  * the max height the projectile reaches, in m
 6. Speed on impact with ground
-  - prints the speed on impact with ground, in m/s
+  * prints the speed on impact with ground, in m/s
 7. Velocity on impact with ground
-  - Prints velocity on impact with ground, in m with offset in degrees 
+  * Prints velocity on impact with ground, in m with offset in degrees 
 
 
 # Versions
