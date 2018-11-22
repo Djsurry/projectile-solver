@@ -5,8 +5,8 @@ Solves physics projectile questions
 open a terminal and type the following: <br>
 ***REPLACE THE BOLDED TEXT WITH THE MOST RECENT VERSION***<br>
 <pre>
-wget https://github.com/Djsurry/projectile-solver/archive/v<b>1.2</b>.zip <br>
-unzip v<b>1.2</b>.zip <br>
+curl https://github.com/Djsurry/projectile-solver/archive/v<b>1.2</b>.zip projectile.zip<br>
+unzip projectile.zip <br>
 cd projectile-solver-<b>1.2</b> <br>
 sudo ./setup <br>
 </pre>
