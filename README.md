@@ -17,9 +17,13 @@ If you have a problem where you have an object being launched from a certain hei
 
 # Versions
 [1.2]("https://github.com/Djsurry/projectile-solver/releases/tag/v1.2")
+
 [1.1]("https://github.com/Djsurry/projectile-solver/releases/tag/v1.1")
+
 [1.0]("https://github.com/Djsurry/projectile-solver/releases/tag/v1.0")
+
 [0.2]('https://github.com/Djsurry/projectile-solver/releases/tag/v0.2')
+
 [0.1]("https://github.com/Djsurry/projectile-solver/releases/tag/v0.1")
 
 
