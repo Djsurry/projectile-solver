@@ -5,7 +5,7 @@ Solves physics projectile questions
 open a terminal and type the following: <br>
 ***REPLACE THE BOLDED TEXT WITH THE MOST RECENT VERSION***<br>
 <pre>
-curl https://github.com/Djsurry/projectile-solver/archive/v<b>1.2</b>.zip projectile.zip<br>
+curl https://codeload.github.com/Djsurry/projectile-solver/zip/v<b>1.2</b>.zip --output projectile.zip<br>
 unzip projectile.zip <br>
 cd projectile-solver-<b>1.2</b> <br>
 sudo ./setup <br>
