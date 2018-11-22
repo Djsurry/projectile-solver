@@ -6,7 +6,9 @@ If you have a problem where you have an object being launched from a certain hei
 
 # Installation
 open a terminal and type the following: <br>
-[***REPLACE THE BOLDED TEXT WITH THE MOST RECENT VERSION***](#Versions)<br>
+
+> Replace the bolded text in the code below with the most recent version. A list of versions is available [here](#Versions)
+
 <pre>
 curl https://codeload.github.com/Djsurry/projectile-solver/zip/v<b>1.0</b> --output projectile.zip<br>
 unzip projectile.zip <br>
