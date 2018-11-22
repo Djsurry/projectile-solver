@@ -262,7 +262,7 @@ class Problem:
 			s = self.y.v1 * time + 0.5 * self.y.a * (time*time)
 			clear(toRemove)
 			
-			print("It will have a displacement of {0:.2f}m on the Y axis when it has gone {1:.2f}m on the X axis\n".format(s, t))
+			print("It will be {0:.2f}m off the ground when it has gone {1:.2f}m on the X axis\n".format(self.height + s, t))
 
 			
 
