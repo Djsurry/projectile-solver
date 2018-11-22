@@ -5,16 +5,8 @@
 #include <errno.h>
 
 int main(){
-	DIR* dir = opendir("/usr/local/bin");
-        if (dir)
-	{
 	system("cp ./projectile /usr/local/bin");
-    	closedir(dir);
-	}
-	else if (ENOENT == errno)
-	{
 		system("cp ./projectile /usr/bin");
-	}
 	printf("All ready to go! Just open a terminal and write \"projectile\" to start the program!\n");
 	return 0;
 }
