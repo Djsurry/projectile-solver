@@ -246,7 +246,9 @@ class Problem:
 			# ds = None, t = t, a = 0, v1 = v1, v2=v2
 			# ds = v1*t + 0.5*a*t^2
 			s = self.x.v1*correct
+			
 			clear(toRemove)
+			print(correct, self.x.v1)
 			print("It will have traved {0:.2f}m in the X direction when it is {1:.2f}m off the ground\n".format(s, t-self.y.s))
 			
 		elif option == "Find Y from X":
