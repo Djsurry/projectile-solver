@@ -3,11 +3,21 @@ from math import cos, sqrt, sin, radians, degrees, atan
 import cutie, readchar
 from sys import exit as close
 from os import system
+from requests import get
 
 GRAVITY = -9.8
 SIZE = 10
 
+VERSION = 1.2
 
+def checkVersion():
+    nextVersion = str(VERSION).split('.')[0] + '.' + str(int(str(VERSION).split('.')[1]) + 1)
+    if len(nextVersion) == 4:
+        nextVersion = str(int(str(VERSION).split('.')[0]) + 1) + '.0'
+    r = get("https://github.com/Djsurry/projectile-solver/relg/veases/tag/v{}".format(nextVersion))
+    if r.status_code != 404:
+        print("WARNGING! YOU ARE USING OUT OF DATE SOFTWARE!\nGO TO https://github.com/Djsurry/projectile-solver to download the latest version")
+        close()
 def quad(a, b, c):
     a2 = a * 2
 
@@ -235,7 +245,7 @@ class Problem:
 
 			if answers:
 				if len(answers) == 2:
-					correct = cutie.select(["Which is correct for time?"] + list(answers), caption_indices = [0])
+					correct = answers[cutie.select(["Which is correct for time?"] + list(answers), caption_indices = [0])-1]
 					toRemove += 3
 				else:
 					correct = answers[0]
@@ -252,7 +262,6 @@ class Problem:
 			s = self.x.v1*correct
 			
 			clear(toRemove)
-			print(correct, self.x.v1)
 			print("It will have traved {0:.2f}m in the X direction when it is {1:.2f}m off the ground\n".format(s, t-self.y.s))
 			
 		elif option == "Find Y from X":
@@ -271,6 +280,7 @@ class Problem:
 
 
 def main():
+    checkVersion()
     i = getInputs()
     p = Problem(isFloat(i[0]), isFloat(i[1]), isFloat(i[2]))
     p.solve()
