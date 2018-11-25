@@ -226,11 +226,9 @@ class Problem:
 			t = self.y.s + t
 			# ds = self.height + t, t = None, a = -9.8, v1 = initVel, v2 = None
 			# ds = v1 * t + 0.5 * a * t^2
-			a = 0.5*GRAVITY
-			b = self.y.v1
-			c = -1*t
+		
+			answers = quad(0.5*self.y.a, self.y.v1, -1*t)
 
-			answers = quad(a, b, c)
 			if answers:
 				if len(answers) == 2:
 					correct = cutie.select(["Which is correct for time?"] + list(answers), caption_indices = [0])
