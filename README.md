@@ -51,6 +51,7 @@ The program asks for 3 inputs; `height`, `angle`, and `initial velocity`.
 
 
 # Versions
+[1.2](https://github.com/Djsurry/projectile-solver/releases/tag/v1.2)
 
 [1.1](https://github.com/Djsurry/projectile-solver/releases/tag/v1.1)
 
